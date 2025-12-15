@@ -139,8 +139,8 @@ build/
 .gitattributes
 gradlew
 gradlew.bat
-gradle/wrapper/gradle-wrapper.jar
-gradle/wrapper/gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.jar 
+!gradle/wrapper/gradle-wrapper.properties
 bin/
 *.class
 # Intellij IDEA
