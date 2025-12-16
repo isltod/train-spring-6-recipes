@@ -100,10 +100,6 @@ Servers
 hs_err_pid*
 replay_pid*
 
-# Gradle
-.gradle/                 # Directory used by Gradle for operational files
-build/                   # Directory for compiled output files
-
 # Dependency caches
 .m2/                     # Maven local repository cache
 .gradle/cache
@@ -146,6 +142,7 @@ bin/
 # Intellij IDEA
 .idea/
 *.iml
+out/
 # Eclipse
 .classpath
 .project
