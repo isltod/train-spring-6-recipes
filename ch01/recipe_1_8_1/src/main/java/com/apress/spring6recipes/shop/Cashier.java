@@ -1,5 +1,7 @@
 package com.apress.spring6recipes.shop;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.context.annotation.Bean;
 
 import java.io.BufferedWriter;
@@ -22,6 +24,8 @@ public class Cashier {
     }
 
     // 이건 configure에서 init으로 지정 - 시작할 때 자동으로 실행된다...
+    // 또는 여기서 바로 post 지정
+    @PostConstruct
     public void openFile() throws IOException {
         var checkoutPath = Path.of(path, filename + ".txt");
         if (Files.notExists(checkoutPath)) {
@@ -38,6 +42,8 @@ public class Cashier {
     }
 
     // 이건 configure에서 destroy 지정 - 끝날 때 자동으로 실행
+    // 또는 여기서 바로 pre 지정
+    @PreDestroy
     public void closeFile() throws IOException {
         writer.close();
     }

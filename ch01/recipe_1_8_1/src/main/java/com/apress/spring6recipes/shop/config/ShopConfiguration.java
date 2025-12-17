@@ -28,7 +28,9 @@ public class ShopConfiguration {
     }
 
     // 이걸로 Cashier 빈을 만들면서 openFile 자동 실행, 끝날 때 closeFile 자동 실행
-    @Bean(initMethod = "openFile", destroyMethod = "closeFile")
+    //@Bean(initMethod = "openFile", destroyMethod = "closeFile")
+    // 또는 여기서는 그냥 만들고, cashier에서 post pre 적용하는 방법도...
+    @Bean
     public Cashier cashier() {
         System.out.println(System.getProperty("java.io.tmpdir"));
         var path = System.getProperty("java.io.tmpdir") + "/casher";
