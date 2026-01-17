@@ -17,6 +17,7 @@ public class SimpleSequenceDao implements SequenceDao{
         values.put("IT", new AtomicInteger(10000));
     }
 
+    // 근데 결국 이 예제에서는 Sequence 객체는 사용하질 않으니 이건 필요 없는 부분...
     @Override
     public Sequence getSequence(String sequenceId) {
         return sequences.get(sequenceId);
