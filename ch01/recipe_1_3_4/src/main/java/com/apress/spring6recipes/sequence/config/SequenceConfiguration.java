@@ -16,6 +16,10 @@ public class SequenceConfiguration {
 
     @Bean
     public Sequence sequence(PrefixGenerator prefixGenerator) {
-        return new Sequence("A", 100000, prefixGenerator);
+        Sequence sequence = new Sequence("A", 100000);
+        // prefixGenerator는 @Autowired 세터로 주입되므로 아래 코드는 불필요
+        // sequence.setPrefixGenerator(prefixGenerator);
+        // 결국 생성자든 세터든 다 자동으로 된다는 얘기...
+        return sequence;
     }
 }

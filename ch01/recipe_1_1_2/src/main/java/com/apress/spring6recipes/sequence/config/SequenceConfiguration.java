@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 
 @Configuration
+// @ComponentScan은 안 붙여줘도 Main에서 basePackages로 지정해주면 스캔이 된다...
 // @ComponentScan("com.apress.spring6recipes.sequence") 처럼 간단하게 해도 되지만, 조건을 넣고싶다면...
 @ComponentScan(
         includeFilters = @ComponentScan.Filter(
