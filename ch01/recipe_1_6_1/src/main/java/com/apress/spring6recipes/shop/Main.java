@@ -14,5 +14,7 @@ public class Main {
         cart.addItem(dvdrw);
 
         System.out.println("Shopping cart contains " + cart.getItems());
+
+        ((AnnotationConfigApplicationContext) context).close();
     }
 }
