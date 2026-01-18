@@ -7,6 +7,8 @@ public class Sequence {
 	private final AtomicInteger counter = new AtomicInteger();
 	private final String suffix;
 
+	// prefixGenerator 속성은 빈 문자열을 반환하는 함수라는 얘긴가...
+	// 일단 인터페이스에 문자열 반환 함수가 정의되어 있으니...
 	private PrefixGenerator prefixGenerator = () -> "";
 
 	public Sequence(String suffix, int initial) {

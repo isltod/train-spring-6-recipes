@@ -12,7 +12,8 @@ public class Sequence {
 
 	private final int initial;
 
-	// DatePrefix와 NumberPrefix를 배열로 자동 삽입 - 여기서는 configuration 클래스에 Bean으로...
+	// @Configuration에서 DatePrefix와 NumberPrefix로 이름도 다 다른데 
+	// 같은 prefixGenerator 타입이라고 다 불러와서 배열로 자동 삽입
 	@Autowired
 	private PrefixGenerator[] prefixGenerators;
 
