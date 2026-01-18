@@ -12,9 +12,12 @@ public class Main {
 
         // 이거 외에도 FileSystemResource, UrlResource 쓸 수 있다고...
         var resource = new ClassPathResource("discounts.properties");
+        // @PropertySource + @Value + @Bean PropertySourcesPlaceholderConfigurer 조합대신 PropertiesLoaderUtils 사용
         var props = PropertiesLoaderUtils.loadProperties(resource);
 
         System.out.println("그리고, 할인 이벤트도 잊지마세요!");
         System.out.println(props);
+
+        ((AnnotationConfigApplicationContext) context).close();
     }
 }

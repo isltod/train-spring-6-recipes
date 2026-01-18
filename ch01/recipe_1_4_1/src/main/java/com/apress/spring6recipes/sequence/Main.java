@@ -3,7 +3,6 @@ package com.apress.spring6recipes.sequence;
 import com.apress.spring6recipes.sequence.config.SequenceConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class Main {
 
@@ -14,6 +13,8 @@ public class Main {
 
 		System.out.println(generator.nextValue());
 		System.out.println(generator.nextValue());
+
+		((AnnotationConfigApplicationContext) context).close();
 	}
 
 }

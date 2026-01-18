@@ -2,7 +2,6 @@ package com.apress.spring6recipes.sequence;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import jakarta.annotation.Resource;
-import org.springframework.context.ApplicationContext;
 
 public class Sequence {
 
@@ -14,15 +13,6 @@ public class Sequence {
     private PrefixGenerator prefixGenerator;
     private String suffix;
     private int initial;
-
-    public Sequence() {
-    }
-
-    public Sequence(PrefixGenerator prefixGenerator, String suffix, int initial) {
-        this.prefixGenerator = prefixGenerator;
-        this.suffix = suffix;
-        this.initial = initial;
-    }
 
     public void setPrefixGenerator(PrefixGenerator prefixGenerator) {
         this.prefixGenerator = prefixGenerator;
