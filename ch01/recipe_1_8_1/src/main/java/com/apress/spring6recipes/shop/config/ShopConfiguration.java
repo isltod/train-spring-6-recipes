@@ -9,6 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+// 이 예제에서는 다른건 다 여기서 @Bean으로 만들어 사용하므로 문제 없는데, 
+// 딱 하나 ShoppingCart가 @Component로 스캔해야 해서 아래 코드 필요...
 @ComponentScan("com.apress.spring6recipes.shop")
 public class ShopConfiguration {
 
