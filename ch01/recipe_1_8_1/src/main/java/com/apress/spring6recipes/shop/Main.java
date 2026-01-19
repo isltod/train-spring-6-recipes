@@ -2,7 +2,6 @@ package com.apress.spring6recipes.shop;
 
 import com.apress.spring6recipes.shop.config.ShopConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) throws Exception {

@@ -7,7 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         try (var context = new AnnotationConfigApplicationContext(SequenceConfiguration.class)) {
-            String[] beans = context.getBeanDefinitionNames();
             var generator = context.getBean("sequence", Sequence.class);
 
             System.out.println(generator.getSequence());

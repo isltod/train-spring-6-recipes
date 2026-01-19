@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+// @Configuration들 중에 오직 Global만 @ComponentScan이 있다...이걸로 다른 Configuration들을 찾게 만든다...
 @ComponentScan("com.apress.spring6recipes.shop")
 public class ShopConfigurationGlobal {
 

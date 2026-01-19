@@ -1,6 +1,5 @@
 package com.apress.spring6recipes.shop;
 
-import org.jspecify.annotations.Nullable;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;

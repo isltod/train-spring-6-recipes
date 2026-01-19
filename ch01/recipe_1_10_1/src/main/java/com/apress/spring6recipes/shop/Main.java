@@ -9,7 +9,7 @@ public class Main {
             var aaa = context.getBean("aaa", Product.class);
             var cdrw = context.getBean("cdrw", Product.class);
             var dvdrw = context.getBean("dvdrw", Product.class);
-
+            // 위에는 같은 Product 타입이므로 이름과 타입, 아래는 딱 하나뿐인 ShoppingCart 타입이므로 타입만..
             var cart1 = context.getBean(ShoppingCart.class);
             cart1.addItem(aaa);
             cart1.addItem(cdrw);

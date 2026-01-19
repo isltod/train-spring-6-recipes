@@ -8,8 +8,13 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         try (var context = new AnnotationConfigApplicationContext()) {
-            context.getEnvironment().setActiveProfiles("spring");
+            // 위와 아래는 사실 AnnotationConfigApplicationContext(ShopConfigurationGlobal.class)를 나눠 넣은 거지만...
+            // 아래 환경 설정을 하고 refresh를 하려면 이렇게 나눠 넣어야 하나보다...
             context.register(ShopConfigurationGlobal.class);
+            // setActiveProfiles 또는 setDefaultProfiles 사용...
+            context.getEnvironment().setActiveProfiles("spring");
+            // context.getEnvironment().setDefaultProfiles("spring");
+            // 또는 -Dspring.profiles.active=winter 또는 spring.profiles.default 옵션 사용
             context.refresh();
 
             var aaa = context.getBean("aaa", Product.class);

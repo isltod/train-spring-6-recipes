@@ -14,7 +14,7 @@ public class SequenceService {
 	// 클래스 필드를 배열, 리스트 맵으로 선언하면 맞는 타입을 다 찾아서 넣어준다.
 
 	// 또는 세터 또는 생성자로 주입...이게 추천...
-	// @Autowired
+	@Autowired
 	// 생성자가 하나뿐이라서 @Autowired 생략 가능 - 결국 이래서 @Autowired가 생략되도 되는 것처럼 보인다...
 	public SequenceService(SequenceDao sequenceDao) {
 		this.sequenceDao = sequenceDao;

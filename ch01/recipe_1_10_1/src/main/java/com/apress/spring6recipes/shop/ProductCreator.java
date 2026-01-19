@@ -1,7 +1,5 @@
 package com.apress.spring6recipes.shop;
 
-import com.sun.source.tree.BreakTree;
-
 public class ProductCreator {
 
     public static Product createProduct(String productId) {

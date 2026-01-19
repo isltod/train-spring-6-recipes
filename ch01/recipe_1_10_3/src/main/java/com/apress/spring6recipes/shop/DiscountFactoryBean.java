@@ -16,12 +16,13 @@ public class DiscountFactoryBean extends AbstractFactoryBean<Product> {
         this.discount = discount;
     }
 
-    // 이게 자동 와이어링 기능이 작동하기 위한 조건이고...
+    // 이게 @Autowired 기능이 작동하기 위한 메서드 오버라이딩
     @Override
     public Class<?> getObjectType() {
         return product.getClass();
     }
 
+    // 이건 이 커스텀 팩토리 빈이 만들어진 목적인 product 빈 인스턴스 생성 메서드...
     // 상품 빈 인스턴스를 만들면서 바로 디스카운트...
     @Override
     protected Product createInstance() throws Exception {
