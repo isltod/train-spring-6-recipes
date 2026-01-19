@@ -17,6 +17,7 @@ public class ShopConfiguration {
     // 인스턴스 메서드로 만들면, 여기서 필요 속성을 넣어 인스턴스를 만들고,
     @Bean
     public ProductCreator productCreatorFactory() {
+        // 일단 실제로는 이걸 DB에서 부르던지 할텐데...아무튼 뭔가 쓸모가 있을까 싶긴 하다...
         var products = Map.of(
                 "aaa", new Battery("AAA", 2.5, true),
                 "cdrw", new Disc("CD-RW", 1.5, 700),
@@ -25,7 +26,7 @@ public class ShopConfiguration {
         return new ProductCreator(products);
     }
 
-    // 다시 그 인스턴스 빈의 createProduct를 호출한다...
+    // 다시 그 인스턴스 빈의 createProduct를 호출한다...이런 방법도 있다 정도...
     @Bean
     public Product aaa(ProductCreator productCreator) {
         return productCreator.createProduct("aaa");

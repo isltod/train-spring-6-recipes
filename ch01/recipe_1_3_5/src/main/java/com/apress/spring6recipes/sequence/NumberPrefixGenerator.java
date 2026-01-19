@@ -1,6 +1,5 @@
 package com.apress.spring6recipes.sequence;
 
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class NumberPrefixGenerator implements PrefixGenerator {

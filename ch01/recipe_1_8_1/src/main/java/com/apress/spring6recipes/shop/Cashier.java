@@ -2,7 +2,6 @@ package com.apress.spring6recipes.shop;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import org.springframework.context.annotation.Bean;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

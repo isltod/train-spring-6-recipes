@@ -10,7 +10,7 @@ public class ProductCreator {
         this.products = products;
     }
 
-    // 이번에는 정적 메서드가 아니라 인스턴스 메서드로 반환한다...
+    // 이번에는 static 메서드가 아니라 인스턴스 메서드로 반환한다...
     public Product createProduct(String productId) {
         Product product = this.products.get(productId);
         if (product != null) {

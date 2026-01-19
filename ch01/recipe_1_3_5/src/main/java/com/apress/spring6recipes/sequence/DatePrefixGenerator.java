@@ -1,6 +1,5 @@
 package com.apress.spring6recipes.sequence;
 
-import java.text.DateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
