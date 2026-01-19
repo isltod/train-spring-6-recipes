@@ -23,6 +23,7 @@ public class Main {
             System.out.printf(MSG,  "alert.inventory.checkout", alert_inventory);
 
             alert = context.getMessage("alert.checkout", null, Locale.KOREA);
+            // 채울 문자열이 없으면 위처럼 null, 있으면 아래처럼 Object[]{배열}
             alert_inventory = context.getMessage(
                     "alert.inventory.checkout",
                     new Object[]{"[DVD-RW 3.0]", LocalDateTime.now()},
@@ -30,6 +31,12 @@ public class Main {
             );
             System.out.printf(MSG, "alert.checkout", alert);
             System.out.printf(MSG,  "alert.inventory.checkout", alert_inventory);
+
+            // 다른 클래스에서 국제화 메시지 이용하려면...스프링 MessageSorce 사용
+            ShoppingCart cart = context.getBean(ShoppingCart.class);
+            cart.addItem(new Product("[DVD-RW 3.0]", 2.5, 0.3));
+            Cachier cachier = context.getBean(Cachier.class);
+            cachier.checkout(cart);
         }
     }
 }
