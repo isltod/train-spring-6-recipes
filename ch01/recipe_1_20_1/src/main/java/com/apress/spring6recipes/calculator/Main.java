@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // var cfg = CalculatorConfiguration.class;
-        // try (var context = new AnnotationConfigApplicationContext(cfg)){
-        try (var context = new AnnotationConfigApplicationContext()){
+        var cfg = CalculatorConfiguration.class;
+        try (var context = new AnnotationConfigApplicationContext(cfg)){
+        // try (var context = new AnnotationConfigApplicationContext()){
             new LoadTimeWeaverApplicationContextInitializer().initialize(context);
             context.register(CalculatorConfiguration.class);
             context.refresh();
