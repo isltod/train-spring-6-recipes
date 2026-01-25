@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.apress.spring6recipes'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-webmvc:7.0.3'
+    implementation 'jakarta.servlet:jakarta.servlet-api:6.1.0'
+}
