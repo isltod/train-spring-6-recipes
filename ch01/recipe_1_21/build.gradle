@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.apress.spring6recipes.shop'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = uri("https://invesdwin.de/repo/invesdwin-oss/")
+    }
+}
+
+dependencies {
+    implementation 'org.springframework:spring-context:7.0.2'
+    // @Aspect 애너테이션 쓰려면 이 종속성을...
+    implementation 'org.springframework:spring-aspects:7.0.3'
+    // slf4j Logger 쓰려면 아래 두 종속성을...
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+    implementation 'ch.qos.logback:logback-classic:1.5.25'
+
+    implementation 'de.invesdwin:invesdwin-instrument:1.0.14'
+}
+
+jar {
+    manifest.attributes('Main-Class': 'com.apress.spring6recipes.calculator.Main')
+}
